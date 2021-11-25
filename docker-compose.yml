@@ -2,7 +2,9 @@ version: '3.4'
 
 services:
   podmanpython:
-    image: podmanpython
+    image: dockerpython
     build:
       context: .
       dockerfile: ./Dockerfile
+    ports:
+      - 5006:5006
