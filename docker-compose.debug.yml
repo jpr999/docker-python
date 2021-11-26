@@ -1,11 +1,11 @@
 version: '3.4'
 
 services:
-  podmanpython:
+  dockerpythondebug:
     image: dockerpythondebug
     build:
       context: .
       dockerfile: ./Dockerfile
-    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5006 test.py "]
+    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5007 test.py "]
     ports:
-      - 5006:5006
+      - 5007:5007
